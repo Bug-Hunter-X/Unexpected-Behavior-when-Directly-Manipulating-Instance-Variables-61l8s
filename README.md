@@ -1,0 +1,4 @@
+# Unexpected Behavior when Directly Manipulating Instance Variables in Ruby
+This example showcases a potential issue in Ruby when directly modifying instance variables using `instance_variable_set` or `instance_variable_get`. While these methods offer flexibility, they can bypass the encapsulation provided by getter and setter methods, potentially leading to inconsistencies and unintended side effects.
+
+The provided code demonstrates a simple class with a getter method for an instance variable. Directly manipulating the instance variable via `instance_variable_set` changes its value, which the getter method then reflects, but this can be problematic in more complex scenarios where additional logic might be embedded in the getter/setter. This can lead to unforeseen issues in larger projects if not managed carefully.
